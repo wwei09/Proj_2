@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Lab 3</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="css/animate.css" rel="stylesheet" />
+    <!-- theme CSS -->
+    <link href="css/style.css" rel="stylesheet">
+	<link href="color/default.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+	<!-- Preloader -->
+	<div id="preloader">
+	  <div id="load"></div>
+	</div>
+
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <h1>Projects</h1>
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href=".../projects/project-main.html">Home</a></li>
+              <li><a href="#about">project #3</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Finished Projects<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+            <li><a href="lab1.html">Project #1</a></li>
+            <li><a href="lab2.html">Project #2</a></li>
+            <li><a href="Webpages/default.html">Old Projects</a></li>
+
+          </ul>
+        </li>
+      </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+	<!-- Section: intro -->
+    <section id="intro" class="intro">
+
+		<div class="slogan">
+			<h2>Project<span class="text_color"># 3</span> </h2>
+			<h4>This website contains my project # 3 on credit card validation.</h4>
+		</div>
+    <br/>
+    <br/>
+    <br/>
+		<div class="page-scroll">
+			<a href="#about" class="btn btn-circle">
+				<i class="fa fa-angle-double-down animated"></i>
+			</a>
+		</div>
+    </section>
+	<!-- /Section: intro -->
+
+	<!-- Section: about -->
+    <section id="about" class="home-section text-center">
+          <div class="heading-about">
+      			<div class="container">
+      			<div class="row">
+      				<div class="col-lg-8 col-lg-offset-2">
+      					<div class="wow bounceInDown" data-wow-delay="0.4s">
+      					<div class="section-heading">
+      					<h2>Project # 3</h2>
+      					<i class="fa fa-2x fa-angle-down"></i>
+
+      					</div>
+      					</div>
+      				</div>
+      			</div>
+      			</div>
+      		</div>
+      		<div class="container">
+      		<div class="row">
+      			<div class="col-lg-2 col-lg-offset-5">
+      				<hr class="marginbot-50">
+      			</div>
+      		</div>
+              <div class="row">
+      <!--credit card-->
+      <center>
+      <form name='calcform' id='myform'>
+								<ul class="forms" style="color:black; font-size:20px;">
+                <ul> Important</ul><br/>
+								<ul>Number must be 16 digits, all of them must be numbers.</ul>
+                <br/>
+								<ul>All digits shouldn't be same.</ul>
+                <br/>
+                <ul>There should be at least two digits different from others</ul>
+                <br/>
+								<ul>The final digit must be even.</ul>
+                <br/>
+								<ul>The sum of all the digits must be greater than 16 </ul>
+                <br/><br/>
+		                <ul>Credit Card Number: <input  class= "cardno" type='text' placeholder= "please enter 16 digits" name='cardno' id='credit'/> </ul>
+                    <br/><br/>
+		               <ul> <input type='button' name='confirm' value='Confirm My Number' onclick='validateCreditCard();'/></ul>
+							</ul>
+							  </form>
+								</div>
+							</section>
+
+					</div>
+      <!-- Scripts -->
+		<script>
+    var c1 = '9999-9999-8888-0000'; //valid
+    var c2 = '6666-6666-6666-1666'; //valid
+    var c3 = 'a923-3221-9c01-4444'; //invaild characters
+    var c4 = '4444-4444-4444-4444'; //only one type of number
+    var c5 = '1111-1111-1111-1110'; // sum less than 16
+    var c6 = '6666-6666-6666-6661'; // odd final number
+
+      function validateCreditCard()
+      {
+            var oform = document.forms['myform'];
+            var cardNumber = oform.elements['credit'].value;
+            //var expDate = oform.elements['expdate'].value;
+
+            var tot = "Your credit number is " + cardNumber + ", " + "please confirm it.";
+
+       // *** To get the last number on the card.
+
+            var lastNum=cardNumber.substr(cardNumber.length-1,1);//last number of the card
+            console.log(lastNum); // last Num
+
+            // get the arr of all the card no.
+            var arrCardNo=cardNumber.substr(0,cardNumber.length);//all the number that typed
+            var newArr=new Array();
+
+            for(var i=arrCardNo.length-1;i>-1;i--){    //arr for the first 15 number;
+
+                newArr.push(parseInt(arrCardNo.substr(i,1)));
+                var noOrder = newArr.reverse();
+            }
+
+       // *** the sum of all the number, Must bigger than 16
+            var sum = noOrder.reduce(function (a, b) {
+              return a + b;}, 0);
+            console.log(sum);
+
+      // ***  Can't be on type of number
+          var deduped = noOrder.filter(function (el, i, arr) {
+              return arr.indexOf(el) === i;
+            });
+            console.log(deduped.length);
+
+
+
+
+
+        // *** invalid characters, all numbers
+            var num = /^\d*$/; //all numbers
+
+        // *** invalid characters && Must be 16 dights && even final number && sum bigger than 16 && Can't be on type of number
+            if (num.exec(cardNumber) && cardNumber.length == 16 && lastNum % 2 == 0 && sum >16 && deduped.length >1){
+              confirm(tot)
+              console.log(tot);
+              alert("Thank you so much for you information!")
+
+              return true;
+              }
+              else{
+              alert("Please enter a vaild credit number!")
+              //console.log(cardno);
+              return false;
+              }
+
+          }
+
+    </script>
+
+                      </div>
+      				</div>
+                  </div>
+
+              </div>
+      		</div>
+
+	</section>
+	<!-- /Section: about -->
+
+
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-lg-12">
+
+
+					<p>&copy;Copyright 2017 - All right reserved to Wei. </p>
+
+				</div>
+			</div>
+		</div>
+	</footer>
+
+    <!-- Core JavaScript Files -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+	<script src="js/jquery.scrollTo.js"></script>
+	<script src="js/wow.min.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="js/custom.js"></script>
+
+</body>
+
+</html>

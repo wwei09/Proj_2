@@ -1,0 +1,31 @@
+﻿  /* CSS layout */
+body {
+	margin: 0;
+	padding: 0;
+  }
+#masthead {
+	text-align: center;
+	color: #0066FF;
+}
+
+#top_nav {
+}
+
+#container {
+	min-width: 600px;
+}
+
+#left_col {
+	width: 200px;
+	float: left;
+	background-color: #3399FF;
+	font-weight: normal;
+}
+#page_content {
+	margin-left: 200px;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+#footer {
+	clear: both;
+}

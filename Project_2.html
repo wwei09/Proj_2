@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+    <title>Project #2</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- external styles and external js -->
+    <link rel="stylesheet" href="css/main.css" >
+	  <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <script src="js/jquery.min.js"></script>
+	  <script src="js/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+
+
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+
+  </head>
+
+  <body data-spy="scroll" data-offset="0" data-target="#theMenu">
+
+	<!-- Menu -->
+	<nav class="menu" id="theMenu">
+		<div class="menu-wrap">
+			<h1 class="logo"><a href="index.html#home">Minimal</a></h1>
+			<i class="icon-remove menu-close"></i>
+			<a href="#home" class="smoothScroll">Home</a>
+			<a href="#about" class="smoothScroll">About</a>
+			<a href="#portfolio" class="smoothScroll">Portfolio</a>
+			<a href="#contact" class="smoothScroll">Contact</a>
+			<a href="https://www.facebook.com/wini.wei" target="_blank"><i class="icon-facebook"></i></a>
+      <a href="https://www.linkedin.com/in/wei-wei-1437b314a/"target="_blank"><i class="icon-linkedin"></i></a>
+		</div>
+
+		<!-- Menu button -->
+		<div id="menuToggle">
+    <i class="icon-reorder"></i></div>
+	</nav>
+
+
+
+	<!-- ========== HEADER SECTION ========== -->
+	<section id="home" name="home"></section>
+	<div id="headerwrap">
+		<div class="container">
+			<br>
+			<div class="row">
+				<h1>Welcome</h1>
+				<br>
+        <h3>Thank You for visiting my website.</h3>
+        <h3>Enjoy ! </h3>
+				<br>
+				<br>
+				<div class="col-lg-6 col-lg-offset-3">
+				</div>
+			</div>
+		</div><!-- /container -->
+	</div><!-- /headerwrap -->
+
+
+	<!-- ========== ABOUT SECTION ========== -->
+	<section id="about" name="about"></section>
+	<div id="f">
+		<div class="container">
+			<div class="row">
+				<h3>ABOUT ME</h3>
+				<p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
+
+				<!-- INTRO INFORMATIO-->
+				<div class="col-lg-6 col-lg-offset-3">
+          <br/><br/>
+					<p>My name is Wei Wei.</p>
+          <p>I am currently a computer science and information system student<br/>
+             in Queensborough Community College.</p><br/>
+					<p>This website contains my current and past projects<br/>
+            on JavaScript, HTML, and CSS.</p><br/>
+					<p></p>
+          <br/><br/><br/><br/><br/>
+				</div>
+			</div>
+		</div><!-- /container -->
+	</div><!-- /f -->
+
+
+	<!-- ========== CAROUSEL SECTION ========== -->
+	<section id="portfolio" name="portfolio"></section>
+	<div id="f">
+		<div class="container">
+			<div class="row centered">
+				<h3>SOME PROJECTS</h3>
+				<p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
+
+				<div class="col-lg-6 col-lg-offset-3">
+					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner">
+              <div class="item active centered">
+								<img class="img-responsive" src="img/proj-main.jpg" alt=""> <div class="read-more">
+									<a href="projects/project-main.html">Read more</a></div>
+							</div>
+
+							<div class="item centered">
+								<img class="img-responsive" src="img/mountain.jpg" alt="">
+                <a href="projects/Webpages/default.html"><div class="read-more">Read more</div></a>
+							</div>
+              <div class="item centered">
+								<img class="img-responsive" src="img/Capture.jpg" alt="">
+								<a href="projects/Simple-Accordion/Simple-Accordion/index.html"><div class="read-more">Read more</div>
+								</a>
+							</div>
+
+						</div>
+						<br>
+						<br>
+						<ol class="carousel-indicators">
+						    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+						    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+						    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+						</ol>
+					</div>
+				</div><!-- col-lg-8 -->
+			</div><!-- row -->
+		</div><!-- container -->
+	</div>	<!-- f -->
+
+	<!-- ========== CONTACT SECTION ========== -->
+  <section class="contact" id="contact">
+    <div id="f">
+      <div class="contact-container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="contact-form">
+              <div class="heading">
+                <h3>CONTACT ME</h3>
+              </div>
+          <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
+
+
+          <form id="contact" action="" method="post">
+            <fieldset>
+              <input name="name" type="text" class="form-control" id="name" placeholder="Your Name" required="">
+            </fieldset>
+            <fieldset>
+              <input name="email" type="email" class="form-control" id="email" placeholder="Email" required="">
+            </fieldset>
+            <fieldset>
+              <select name="subject" type="subject" class="form-control" id="subject" required="require">
+                <option value="na" selected="">Choose One:</option>
+                <option value="suggestions">Suggestions</option>
+                <option value="hire">Hire Me</option>
+                <option value="exchange">Exchange Knowledge</option>
+                <option value="questions">Questions</option>
+                <option value="others">Others</option>
+            </fieldset>
+            <br/>
+            <fieldset>
+              <textarea name="message" rows="6" class="form-control" id="message" placeholder="Message" required=""></textarea>
+            </fieldset>
+            <fieldset>
+              <button type="submit" id="form-submit" class="btn">Submit</button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="more-info">
+          If you find my portfolio interest you<br/><br/>
+          or there's something on my webpage you think I should impove,<br/><br/>
+          please leave you information and message.<br/><br/>
+          I will answer it back as soon as posible <br/><br/><br/>
+          Thank You for visiting my website.<br/>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </section>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+	<script src="js/classie.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,307 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>CSS Star Wars Crawling Titles</title>
+
+<style>
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+
+* { padding: 0; margin: 0; }
+
+body, html
+{
+	width: 100%;
+	height: 100%;
+	font-family: "Droid Sans", arial, verdana, sans-serif;
+	font-weight: 700;
+	color: #ff6;
+	background-color: #000;
+	overflow: hidden;
+}
+
+p#start
+{
+	position: relative;
+	width: 16em;
+	font-size: 200%;
+	font-weight: 400;
+	margin: 20% auto;
+	color: #4ee;
+	opacity: 0;
+	z-index: 1;
+	-webkit-animation: intro 2s ease-out;
+	-moz-animation: intro 2s ease-out;
+	-ms-animation: intro 2s ease-out;
+	-o-animation: intro 2s ease-out;
+	animation: intro 2s ease-out;
+}
+
+@-webkit-keyframes intro {
+	0% { opacity: 1; }
+	90% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+@-moz-keyframes intro {
+	0% { opacity: 1; }
+	90% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+@-ms-keyframes intro {
+	0% { opacity: 1; }
+	90% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+@-o-keyframes intro {
+	0% { opacity: 1; }
+	90% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+@keyframes intro {
+	0% { opacity: 1; }
+	90% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+h1
+{
+	position: absolute;
+	width: 2.6em;
+	left: 50%;
+	top: 25%;
+	font-size: 10em;
+	text-align: center;
+	margin-left: -1.3em;
+	line-height: 0.8em;
+	letter-spacing: -0.05em;
+	color: #000;
+	text-shadow: -2px -2px 0 #ff6, 2px -2px 0 #ff6, -2px 2px 0 #ff6, 2px 2px 0 #ff6;
+	opacity: 0;
+	z-index: 1;
+	-webkit-animation: logo 5s ease-out 2.5s;
+	-moz-animation: logo 5s ease-out 2.5s;
+	-ms-animation: logo 5s ease-out 2.5s;
+	-o-animation: logo 5s ease-out 2.5s;
+	animation: logo 5s ease-out 2.5s;
+}
+
+h1 sub
+{
+	display: block;
+	font-size: 0.3em;
+	letter-spacing: 0;
+	line-height: 0.8em;
+}
+
+@-webkit-keyframes logo {
+	0% { -webkit-transform: scale(1); opacity: 1; }
+	50% { opacity: 1; }
+	100% { -webkit-transform: scale(0.1); opacity: 0; }
+}
+
+@-moz-keyframes logo {
+	0% { -moz-transform: scale(1); opacity: 1; }
+	50% { opacity: 1; }
+	100% { -moz-transform: scale(0.1); opacity: 0; }
+}
+
+@-ms-keyframes logo {
+	0% { -ms-transform: scale(1); opacity: 1; }
+	50% { opacity: 1; }
+	100% { -ms-transform: scale(0.1); opacity: 0; }
+}
+
+@-o-keyframes logo {
+	0% { -o-transform: scale(1); opacity: 1; }
+	50% { opacity: 1; }
+	100% { -o-transform: scale(0.1); opacity: 0; }
+}
+
+@keyframes logo {
+	0% { transform: scale(1); opacity: 1; }
+	50% { opacity: 1; }
+	100% { transform: scale(0.1); opacity: 0; }
+}
+
+/* the interesting 3D scrolling stuff */
+#titles
+{
+	position: absolute;
+	width: 18em;
+	height: 50em;
+	bottom: 0;
+	left: 50%;
+	margin-left: -9em;
+	font-size: 350%;
+	text-align: justify;
+	overflow: hidden;
+	-webkit-transform-origin: 50% 100%;
+	-moz-transform-origin: 50% 100%;
+	-ms-transform-origin: 50% 100%;
+	-o-transform-origin: 50% 100%;
+	transform-origin: 50% 100%;
+	-webkit-transform: perspective(300px) rotateX(25deg);
+	-moz-transform: perspective(300px) rotateX(25deg);
+	-ms-transform: perspective(300px) rotateX(25deg);
+	-o-transform: perspective(300px) rotateX(25deg);
+	transform: perspective(300px) rotateX(25deg);
+}
+
+#titles:after
+{
+	position: absolute;
+	content: ' ';
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 60%;
+	background-image: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+	background-image: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+	background-image: -ms-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+	background-image: -o-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+	background-image: linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+	pointer-events: none;
+}
+
+#titles p
+{
+	text-align: justify;
+	margin: 0.8em 0;
+}
+
+#titles p.center
+{
+	text-align: center;
+}
+
+#titles a
+{
+	color: #ff6;
+	text-decoration: underline;
+}
+
+#titlecontent
+{
+	position: absolute;
+	top: 100%;
+	-webkit-animation: scroll 140s linear 4s infinite;
+	-moz-animation: scroll 140s linear 4s infinite;
+	-ms-animation: scroll 140s linear 4s infinite;
+	-o-animation: scroll 140s linear 4s infinite;
+	animation: scroll 140s linear 4s infinite;
+}
+
+/* animation */
+@-webkit-keyframes scroll {
+	0% { top: 100%; }
+	100% { top: -170%; }
+}
+
+@-moz-keyframes scroll {
+	0% { top: 100%; }
+	100% { top: -170%; }
+}
+
+@-ms-keyframes scroll {
+	0% { top: 100%; }
+	100% { top: -170%; }
+}
+
+@-o-keyframes scroll {
+	0% { top: 100%; }
+	100% { top: -170%; }
+}
+
+@keyframes scroll {
+	0% { top: 100%; }
+	100% { top: -170%; }
+}
+.auto-style1 {
+	font-family: "MV Boli";
+}
+</style>
+
+</head>
+<body>
+
+<p id="start" class="auto-style1" style="left: -1px; top: 1px">Letter to who may 
+read this.....</p>
+
+<h1>ET-710<sub>HTML</sub></h1>
+
+<div id="titles"><div id="titlecontent">
+
+	<p class="center">Spring 2017</p>
+	
+	<p>Hello Everyone!</p>
+	
+	<p>My name is Wei. </p>
+	
+	<p>It's really nice to meet everyone!</p>
+	
+	<p></p>
+		
+	<p>I know you might not in the same semester as I am.</p>
+	
+	<p>But I am really happy to see you enrolled in this class.</p>
+	
+	<p>I know, I know.</p>
+	
+	<p>You enrolled in this class might not because you are interested in web design.</p>
+	
+	<p>I think the most common reason you are here is because this is one of the requirement class that you need to take.</p>
+	
+	<p>But I think you will like this class once you started.</p>
+	
+	<p>It might be even useful for you in the future.</p>
+	
+	<p>&nbsp;</p>
+	
+	<p>Let me tell you something about ET-710 this class.</p>
+	
+	<p>ET-710 is a multi-sectional class, intended for Art Majors, and also Internet and Information Technology Majors.</p>
+	
+	<p>It covers the basics of design in HTML5, as well as foraying into JavaScript.</p>
+
+	<p>It is an amazing starter for those trying to build a web design portfolio, or even those just looking to increase their general knowledge.</p>
+	
+	<p>&nbsp;</p>
+	
+	<p>In this class, you'll end up learning about style sheets, how to publish to a website, and how to create all types of interesting things.</p>
+	
+	<p></p>
+	
+	<p>You picked this class might not because of your interest.</p>
+	
+	<p>But after you start the class, this could be a fun and interesting class to you.</p>
+	
+	<p>By the way, Professor Brian is a really nice professor.</p>
+	
+	<p>If you need help for anything about what we learned in class, he's always willing to help.</p>
+	
+	<p>Just ask him.</p>
+	<p>&nbsp;</p>
+	
+	<p>Hope everyone enjoy this class.</p>
+	
+	<p>Have a nice summer/winter break.</p>
+	
+	<p>&nbsp;</p>
+	
+	<p>Made by Wei Wei</p>
+	
+	<p>Spring 2017</p>
+	
+	<p>&nbsp;</p>
+	
+	<p>&nbsp;</p>
+	
+</div></div>
+
+</body>
+</html>
